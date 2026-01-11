@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://from-inside.onrender.com/sitemap.xml
