@@ -1,0 +1,324 @@
+:root {
+  --bg: #0a0a0b;
+  --bg-elevated: #111113;
+  --text: #c4c4c4;
+  --text-bright: #e8e8e8;
+  --text-dim: #6b6b6b;
+  --accent: #7a9e7a;
+  --border: #1f1f22;
+  --font-body: 'IBM Plex Serif', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', 'Consolas', monospace;
+  --max-width: 640px;
+  --line-height: 1.75;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: var(--line-height);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+header {
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3rem;
+}
+
+.site-name {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.site-name:hover {
+  color: var(--text);
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-right: 1.5rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+/* Main content */
+main {
+  padding-bottom: 6rem;
+}
+
+/* Typography */
+h1 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--text-bright);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-bright);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+blockquote {
+  border-left: 2px solid var(--border);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 3rem 0;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--bg-elevated);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+/* Essay styles */
+.essay-meta {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.essay-content {
+  font-size: 1rem;
+}
+
+.essay-content p:first-of-type::first-letter {
+  font-size: 3rem;
+  float: left;
+  line-height: 1;
+  margin-right: 0.5rem;
+  margin-top: 0.1rem;
+  color: var(--text-bright);
+}
+
+/* Section marker */
+.section-marker {
+  text-align: center;
+  color: var(--text-dim);
+  margin: 3rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+}
+
+/* List pages */
+.essay-list {
+  list-style: none;
+  padding: 0;
+}
+
+.essay-list li {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.essay-list li:last-child {
+  border-bottom: none;
+}
+
+.essay-list a {
+  color: var(--text-bright);
+  border-bottom: none;
+  font-size: 1.1rem;
+}
+
+.essay-list a:hover {
+  color: var(--accent);
+}
+
+.essay-list .description {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Fragment styles */
+.fragment {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.fragment:last-child {
+  border-bottom: none;
+}
+
+.fragment-date {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+/* Emphasis styles */
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 2rem 0 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .essay-content p:first-of-type::first-letter {
+    font-size: 2.5rem;
+  }
+}
+
+/* Selection */
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Focus states */
+a:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Reading sequences */
+.sequence-description {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.reading-sequence {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.reading-sequence li {
+  margin-bottom: 0.4rem;
+}
+
+.reading-sequence a {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.reading-sequence a:hover {
+  color: var(--accent);
+}
+
+/* Print */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  header, footer, nav {
+    display: none;
+  }
+}
